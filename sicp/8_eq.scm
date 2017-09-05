@@ -1,0 +1,8 @@
+(define (eight m)
+  (define (eight-iter x y n)
+    (cond ((= n 1) 1)
+          ((or (> x 1) (> y 1)) (eight-iter (- x 1) (- y 1) (- n 1)))
+      	  ((or (< x n) (< y n)) (eight-iter (+ x 1) (+ y 1) (- n 1)))
+      	  ((or (> x 1) (< y n)) (eight-iter (- x 1) (+ y 1) (- n 1)))
+      	  ((or (< x n) (> y 1)) (eight-iter (+ x 1) (- y 1) (- n 1)))))
+(eight-iter 1 1 m))

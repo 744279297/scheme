@@ -1,0 +1,12 @@
+(define (fib n)
+  (cond ((= n 0) 0)
+        ((= n 1) 1)
+        (else (+ (fib (- n 1)) (fib (- n 2))))
+    ))
+(define (fib-new n)
+  (define (fib-iter current total count)
+    (if (= count 0)
+        total
+        (fib-iter (+ current total) current (- count 1))))
+  (fib-iter 1 0 n)
+)
