@@ -12,4 +12,4 @@
 	  	  (else (cons (first-deep (car lat)) (first-deep (cdr lat)))))))
 
 
-(display (first-deep '(((m n) (e v)) (c d) (e f))))
+;(display (first-deep '(((m n) (e v)) (c d) (e f))))

@@ -1,11 +1,11 @@
 (define subst 
 	(lambda (new old lat)
 		(cond ((null? lat) '())
-	    ((eq? old (car lat)) (cons new (cdr lat)))
-	    (else (cons (car lat) (subst new old (cdr lat)))))))
+	    	((eq? old (car lat)) (cons new (cdr lat)))
+	    	(else (cons (car lat) (subst new old (cdr lat)))))))
 
 
-(display (subst 'a 'b '(a b)))
+;(display (subst 'a 'b '(a b)))
 
 
 (define subst2 
@@ -15,7 +15,8 @@
 	  	  (else (cons (car lat) (subst2 new o1 o2 (cdr lat)))))))
 
 
-(display (subst2 'a 'b 'c '(a b b c)))
+;(display (subst2 'a 'b 'c '(a b b c)))
+
 
 (define multisubst 
 	(lambda (new old lat)
@@ -25,4 +26,4 @@
 
 
 
-(display (multisubst 'a 'b '(a b b c)))
+;(display (multisubst 'a 'b '(a b b c)))

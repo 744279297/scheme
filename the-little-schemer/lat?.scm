@@ -6,4 +6,4 @@
 	((null? l)#t)
 	((atom? (car l)) (lat? (cdr l)))
 	(else #f))))
-(display (lat? '(a b c)))
+;(display (lat? '(a b c)))
