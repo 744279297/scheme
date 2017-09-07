@@ -6,4 +6,4 @@
 		(cond ((< a b) 0)
 	      (else (add1 (divide (sub a b) b))))))
 
-(display (divide 4 2))
+;(display (divide 4 2))
