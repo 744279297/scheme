@@ -6,5 +6,5 @@
 			((zero? m) n)
 	      	(else (add1 (add n (sub1 m)))))))
 
-(display (add+ 32 45))
+;(display (add+ 32 45))
 		

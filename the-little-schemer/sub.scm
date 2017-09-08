@@ -6,4 +6,4 @@
 			((zero? b) a)
 	        (else (sub1 (sub a (sub1 b)))))))
 
-(display (sub 10 8))
+;(display (sub 10 8))
