@@ -70,9 +70,9 @@
 
 
 
-(display (remberwithequal
-  '(foo (bar (baz)))
-  '(apples (foo (bar (baz))) oranges)))
+; (display (remberwithequal
+;   '(foo (bar (baz)))
+;   '(apples (foo (bar (baz))) oranges)))
 
 
 

@@ -20,9 +20,9 @@
                 (square (value (car nexp))  (value (car (cdr (cdr nexp)))))))))
 
 
-(display (value 13))                                   ; 13
-(display (value '(1 + 3)))                            ; 4
-(display (value '(1 + (3 ^ 4))))                     ; 82
+; (display (value 13))                                   ; 13
+; (display (value '(1 + 3)))                            ; 4
+; (display (value '(1 + (3 ^ 4))))                     ; 82
            
 
 (define 1st-sub-exp
@@ -52,6 +52,6 @@
                 (square (value2 (1st-sub-exp aexp)) (value2 (2nd-sub-exp aexp)))))))
 
 
-(display (value2 13))                                   ; 13
-(display (value2 '(+ 1 3)))                            ; 4
-(display (value2 '(+ 1 (^ 3 4)))) 
+; (display (value2 13))                                   ; 13
+; (display (value2 '(+ 1 3)))                            ; 4
+; (display (value2 '(+ 1 (^ 3 4)))) 

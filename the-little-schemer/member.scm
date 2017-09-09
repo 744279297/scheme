@@ -12,5 +12,5 @@
 
 
 
-(display (member* 'b '(b (c a) (d a))))
+;(display (member* 'b '(b (c a) (d a))))
 
