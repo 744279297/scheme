@@ -75,6 +75,47 @@
 ;   '(apples (foo (bar (baz))) oranges)))
 
 
+(define rember-f 
+	(lambda (test? a l) 
+		(cond 
+			((null> l) '())
+			((test? a (car l)) (cdr l))
+			(else (cons (car lat) (rember-f test? a (cdr l)))))))
+
+
+
+(define  rember-f-curry
+	(lambda (test?) 
+		(lambda (a l) 
+			(cond 
+			((null> l) '())
+			((test? a (car l)) (cdr l))
+			(else (cons (car lat) ((rember-f-curry test?) a (cdr l))))))))
+
+(define multirember&co
+	(lambda (a lat col) 
+		(cond 
+			((null? lat) (col '() '()))
+			((eq? (car lat) a)
+			(multirember&co a (cdr lat) 
+				(lambda (newlat seen) 
+					(col newlat (cons (car lat) seen)))))
+			(else (multirember&co a (cdr lat) 
+				(lambda (newlat seen) 
+					(col (cons (car lat) newlat) seen)))))))
+
+(define a-friend (lambda (x y) (null? x)))
+(define last-friend (lambda (x y) (length x)))
+; (display (multirember&co 'tuna '(strawberries tuna and tuna swordfish af www fff) a-friend))
+; (display '----)
+; (display (multirember&co 'tuna '(strawberries tuna and tuna swordfish af www fff) last-friend))
+
+
+
+
+
+
+
 
 
 
